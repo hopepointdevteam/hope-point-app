@@ -1,0 +1,46 @@
+<div class="pimg1 patio-landing-image">
+  <div class="ptext">
+    <h4>
+      <span class="border">
+        HOPE POINT WELCOMES YOU 
+      </span>
+    </h4>
+  </div>
+</div> 
+<section class="section section-light">
+  <h2><strong>Welcome to the Brick Patio</strong></h2>
+  <p>
+    eget dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas maecenas pharetra convallis posuere morbi leo urna molestie at elementum eu facilisis sed odio morbi quis commodo odio aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat in
+  </p>
+</section>
+<section class="section section-dark">
+  <h2><strong>Let's get you connected</strong></h2>
+</section>
+<div>
+  <div class="card-deck pt-5 px-5">
+    <div 
+      class="card"
+      *ngFor="let c of connections"      
+    >
+      <div
+        class="card-body"
+        (click)="hidden[c.id] = !hidden[c.id]"
+        id="{{c.id}}"          
+      >
+        <img 
+          src="{{c.ImgUrl}}"
+          alt="{{c.name}}"
+          class="card-img-top"
+        />
+        <div
+          class="card-body"
+        >
+          <h4 class="title text-center">{{c.name}}</h4>
+          <div class="hidden{{c.id}}" *ngIf="hidden[c.id]">
+            {{c.description}}
+          </div>          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

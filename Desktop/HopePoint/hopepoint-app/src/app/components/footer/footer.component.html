@@ -1,0 +1,200 @@
+<!-- Footer -->
+<footer class="page-footer font-small bg-dark pt-4">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-4 mx-auto">
+
+          <!-- Content -->
+          <h4 class="text-center text-white">Contact Us</h4>
+          <hr>
+          <div class="alert alert-primary alert-dismissable pt-3" [hidden]="messageConfirmationHidden">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+            Your message has been sent to the Hope Point office
+          </div>
+          <form #infoMessage="ngForm" (ngSubmit)="sendMessage(infoMessage)">
+            <div class="form-group">
+              <label for="name">Enter your Name:</label>
+              <input 
+                type="text"
+                [(ngModel)]="message.name"
+                [ngClass]="{'is-invalid':messageName.errors && messageName.touched}" 
+                class="form-control" 
+                name="name" 
+                (click)="toggleForm($event)" 
+                #messageName="ngModel"
+                required
+                minlength="2"
+              >
+              <div [hidden]="!messageName.errors?.required" class="invalid-feedback">
+                Your name is required
+              </div>
+              <div [hidden]="!messageName.errors?.minlength" class="invalid-feedback">
+                  Must be at least 2 characters
+              </div>
+            </div>
+            <div [hidden]="hidden">
+                <div class="form-group">
+                  <label for="pwd">Email Address:</label>
+                  <input 
+                    type="email"
+                    [(ngModel)]="message.email"
+                    [ngClass]="{'is-invalid':messageEmail.errors && messageEmail.touched}"
+                    class="form-control" 
+                    name="email" 
+                    #messageEmail="ngModel"
+                    required
+                    pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+                    >
+                    <div [hidden]="!messageEmail.errors?.required" class="invalid-feedback">
+                      Your email is required.
+                    </div>
+                    <div [hidden]="!messageEmail.errors?.pattern" class="invalid-feedback">
+                      Email entered is invalid.
+                    </div>
+                </div>
+                <div class="form-group">
+                  <label for="message">Message:</label>
+                  <textarea 
+                    class="form-control"
+                    name="message"
+                    [(ngModel)]="message.message"
+                    [ngClass]="{'is-invalid':messageMessage.errors && messageMessage.touched}"
+                    #messageMessage="ngModel"
+                    required
+                    minlength="128"
+                    maxlength="500"
+                  >
+                  </textarea>
+                  <div [hidden]="!messageMessage.errors?.minlength" class="invalid-feedback">
+                    Message is too short, please add more information so we can assist you better.
+                  </div>
+                  <div [hidden]="!messageMessage.errors?.maxlength" class="invalid-feedback">
+                    Message is too long, please shorten.
+                  </div>
+                </div>
+                <button 
+                  class="btn btn-primary form-control"  
+                  [disabled]="!infoMessage.form.valid"
+                >
+                  Send Message
+                </button>
+                
+            </div>
+            
+            
+          </form>
+          
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-white">Information</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="about">About</a>
+            </li>
+            <li>
+              <a href="patio">Brick Patio</a>
+            </li>
+            <li>
+              <a href="bahamas">Bahamas Mission</a>
+            </li>            
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+        <!-- Grid column -->
+        <div class="col-md-3 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-white">Worship</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="prayer">House of Prayer</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-white">Ministries</h5>
+
+          <ul class="list-unstyled">
+            <li *ngFor="let a of allMinistries">
+              <a href="{{a.href}}">{{a.name}}</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <hr>
+
+    <!-- Call to action -->
+    <ul class="list-unstyled list-inline text-center py-2">
+      <li class="list-inline-item">
+          <a class="list-anchor" href="https://www.google.com/maps/@39.1336927,-121.6728428,18z" target="_blank">600 N. GEORGE WASHINGTON BLVD</a><br>
+          <small>YUBA CITY, CA 95993</small>
+      </li>
+    </ul>
+    <!-- Call to action -->
+
+    <hr>
+
+    <!-- Social buttons -->
+    <ul class="list-unstyled list-inline text-center">
+      <li class="list-inline-item">
+        <a class="btn-floating btn-fb mx-1" href="https://www.facebook.com/hpnaz/">
+          <i class="fa fa-facebook fa-2x"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-tw mx-1" href="https://twitter.com/HopePointNaz">
+          <i class="fa fa-twitter fa-2x"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-gram mx-1" href="https://www.instagram.com/hopepointnazyc/">
+          <i class="fa fa-instagram fa-2x"> </i>
+        </a>
+      </li>
+    </ul>
+    <!-- Social buttons -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© {{ today | date : 'yyyy' }} Copyright:
+      Hope Point Nazarene
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->

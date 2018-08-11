@@ -1,0 +1,108 @@
+<nav [ngClass]="NavClass">
+    <!-- Brand -->
+    <a class="navbar-brand d-none d-lg-block" routerLink="/">
+      <span>
+        <img 
+          src="../../../assets/images/HPN_Logo_250x250.png" 
+          class="img-fluid" 
+          style="height:85px; width: 100px; margin-top: 5px;"
+        >
+      </span>  
+    </a>    
+    <!-- Toggler/collapsibe Button -->
+    <button 
+      class="navbar-toggler" 
+      type="button" 
+      data-toggle="collapse" 
+      data-target="#HopePointNav"
+      aria-expanded="false" 
+      aria-label="Toggle navigation" 
+      aria-controls="HopePointNav"
+    >
+      <span>
+        <img 
+          src="../../../assets/images/HPN_Logo_250x250.png" 
+          class="img-fluid" 
+          style="height:85px; width: 100px; margin-top: 5px;"
+        >
+      </span>
+    </button>
+
+    <!-- Navbar links -->
+    <div [ngClass]="TogglerClass" id="HopePointNav">
+      <!-- List of Links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a 
+            class="nav-link" 
+            href="">
+              Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a 
+            class="nav-link" 
+            href="about">
+              About
+          </a>
+        </li>
+        <li class="nav-item">
+          <a 
+            class="nav-link" 
+            href="ministries">
+              Ministries
+            </a>
+        </li>
+        <li class="nav-item">
+          <a 
+            class="nav-link" 
+            href="patio"
+          >
+            Brick Patio
+          </a>
+        </li>
+        <li class="nav-item">
+            <a 
+              class="nav-link" 
+              href="table"
+            >
+              The Table
+            </a>
+          </li>
+        <li class="nav-item">
+          <a 
+            class="nav-link" 
+            href="bahamas"
+          >
+            Bahamas
+          </a>
+        </li>
+        <li class="nav-item">
+          <a 
+            class="nav-link" 
+            href="events"
+          >
+            Events
+          </a>
+        </li> 
+        <li class="nav-item">
+          <a 
+            class="nav-link" 
+            href="sermons"
+          >
+            Sermons
+          </a>
+        </li>
+        <li class="nav-item">
+          <a 
+            class="nav-link" 
+            href="https://pushpay.com/pay/hopepointnazarene/N8vOv5UhvTdkugMB4S35UQ"
+          >
+            Give
+          </a>
+        </li> 
+      </ul>
+      <!--./List of Links-->
+    </div>
+     
+</nav>

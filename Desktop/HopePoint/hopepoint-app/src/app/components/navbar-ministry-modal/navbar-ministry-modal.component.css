@@ -1,0 +1,12 @@
+ .set-height {
+   height: 100%;
+   width: 15vw;
+ }
+
+ a {
+   color: #000;
+ }
+
+ a:hover {
+   text-decoration: none;
+ }

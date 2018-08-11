@@ -1,0 +1,26 @@
+<div class="pimg1 ministry-landing-image">
+  <div class="ptext">
+    <h4>
+      <span class="border">
+        HOPE POINT Ministries 
+      </span>
+    </h4>
+  </div>
+</div>
+<section class="section section-dark">
+  <h2><strong>Find a ministry that fits your desires</strong></h2>
+</section>
+<div>
+    <div class="card-columns pt-5 px-5">
+      <div class="card mx-auto my-3" *ngFor="let m of ministries">
+        <a href="{{m.href}}">
+          <div class="card-body" [ngStyle]="{ 'background-image': 'url(' + m.ImgUrl + ')',  'background-size': 'cover',
+          'background-repeat': 'no-repeat' }">
+            <div class="d-flex mx-auto align-content-center ">
+              <img src="{{m.logoUrl}}" class="img-fluid flex-fill small-img">
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>

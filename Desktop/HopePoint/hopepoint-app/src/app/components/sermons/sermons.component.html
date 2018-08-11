@@ -1,0 +1,54 @@
+<div class="pimg1 sermons-landing-image">
+  <div class="ptext">
+    <h3>
+      <span class="border">
+       Hope Point Sermons
+      </span>
+    </h3>
+  </div>
+</div>
+<div class="container bg-dark py-3">
+    <div class="carousel slide" data-interval="false" id="hopePointVideos">        
+        <div class="carousel-inner">
+          <div class="carousel-item responsive-item" *ngFor="let s of sermons; index as i" [ngClass]="i == 0 ? 'active' : ''">
+              <div class="card w-50 mx-auto my-auto">
+                  <div class="card-header">
+                      <iframe 
+                        [src]="sanatizeUrl(s.id.videoId)" 
+                        frameborder="0" 
+                        allow="encrypted-media" 
+                        allowfullscreen
+                      >
+                      </iframe>
+                  </div>
+                  <div class="card-body">
+                      <h4 class="card-title">{{s.snippet.title}}</h4>
+                      <p class="card-text">{{s.snippet.channelTitle}}</p>
+                      <p class="card-text">{{s.snippet.description}}</p>
+                  </div>
+                  <div class="card-footer d-inline-flex">
+                    <div class="p-2">
+                      <a class="w-100 h-100" href="#hopePointVideos" data-slide="prev">
+                        <span><i class="fa fa-arrow-left fa-2x"></i></span>
+                      </a>
+                    </div>
+                    <div class="flex-grow-1 mx-auto">        
+                    </div>
+                    <div class="p-2">
+                      <a class="w-100 h-100" href="#hopePointVideos" data-slide="next">
+                        <span><i class="fa fa-arrow-right fa-2x"></i></span>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+</div>
+<section class="section sectoin-light">
+  <div class="container">
+    <h4 class="text-center">For more sermons please visit our Youtube channel</h4>
+    <p class="text-center"><a href="https://www.youtube.com/channel/UCZoJnP9s_Wxd0HPzl47evyA/" target="_blank">Here</a></p>
+  </div>
+</section>
+

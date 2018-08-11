@@ -1,0 +1,100 @@
+.pimg1, .pimg2, .pimg3 {
+	position: relative;
+	opacity: 0.80;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.belief-image {
+  height: 75vh;
+  background-image: url(../../../assets/images/Believe_BG.jpg);
+}
+
+.mission-image {
+  background-image: url(../../../assets/images/Vision_BG.jpg);
+}
+
+.campus-image {
+  background-image: url(../../../assets/images/Visit_BG.jpg);
+}
+
+.pimg1 {
+	min-height: 100%;
+	width: 100%;
+}
+
+.pimg2 {
+  height: 600px;
+	max-height: 600px;
+	width: 100%;
+}
+.pimg3 {
+  height: 600px;
+	max-height: 600px;
+	width: 100%;
+}
+
+.section {
+	text-align: center;
+	padding: 50px 80px;
+}
+
+.section-light {
+	background-color: #F4F4F4;
+	color: #000;
+}
+
+.section-dark {
+	background-color: #282E34;
+	color: #DDD;
+}
+
+.section-sermon {
+	background-color: rgba(0,0,0,.5);
+	color: #000;
+	height: 100%;
+}
+
+.ptext {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	color: #000;
+	/* font-size: 27px;
+	letter-spacing: 8px; */
+	text-transform: uppercase;
+}
+
+.ptext-bottom {
+	position: absolute;
+	top: 30%;
+	width: 100%;
+	text-align: center;
+	color: #000;
+	font-size: 27px;
+	letter-spacing: 8px;
+	text-transform: uppercase;
+}
+
+.border {
+	border-radius: 15px;
+}
+
+.ptext-bottom .border {
+	background-color: rgba(0,0,0,0.5);
+	color: #FFF;
+	padding: 20px;
+}
+
+.ptext .border {
+	background-color: rgba(0,0,0,0.5);
+	color: #FFF;
+	padding: 20px;
+}
+
+.ptext .border .trans{
+	background-color: transparent;
+}
