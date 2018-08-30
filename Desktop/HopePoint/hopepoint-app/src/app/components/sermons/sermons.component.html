@@ -7,10 +7,10 @@
     </h3>
   </div>
 </div>
-<div class="container bg-dark py-3">
+<div class="container bg-light py-3">
     <div class="carousel slide" data-interval="false" id="hopePointVideos">        
         <div class="carousel-inner">
-          <div class="carousel-item responsive-item" *ngFor="let s of sermons; index as i" [ngClass]="i == 0 ? 'active' : ''">
+          <div class="carousel-item responsive-item" *ngFor="let s of sermons?.items; index as i" [ngClass]="i == 0 ? 'active' : ''">
               <div class="card w-50 mx-auto my-auto">
                   <div class="card-header">
                       <iframe 
@@ -48,7 +48,7 @@
 <section class="section sectoin-light">
   <div class="container">
     <h4 class="text-center">For more sermons please visit our Youtube channel</h4>
-    <p class="text-center"><a href="https://www.youtube.com/channel/UCZoJnP9s_Wxd0HPzl47evyA/" target="_blank">Here</a></p>
+    <p class="text-center"><a href="https://www.youtube.com/channel/UCZoJnP9s_Wxd0HPzl47evyA/" target="_blank"><i class="fab fa-youtube-square fa-2x"></i></a></p>
   </div>
 </section>
 

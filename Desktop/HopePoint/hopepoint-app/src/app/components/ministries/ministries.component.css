@@ -1,89 +1,6 @@
-.pimg1, .pimg2, .pimg3 {
-	position: relative;
-	opacity: 0.80;
-	background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-}
-
 .ministry-landing-image {
   height: 75vh;
 	background-image: url(../../../assets/images/extra_content/bible_pages_turning.jpg);
-}
-
-
-.pimg1 {
-	min-height: 100%;
-	width: 100%;
-}
-
-.pimg2 {
-	min-height: 600px;
-	width: 100%;
-}
-.pimg3 {
-	min-height: 600px;
-	width: 100%;
-}
-
-.section {
-	text-align: center;
-	padding: 50px 80px;
-}
-
-.section-light {
-	background-color: #F4F4F4;
-	color: #000;
-}
-
-.section-dark {
-	background-color: #282E34;
-	color: #DDD;
-}
-
-.section-sermon {
-	background-color: rgba(0,0,0,.5);
-	color: #000;
-	height: 100%;
-}
-
-.ptext {
-	position: absolute;
-	top: 50%;
-	width: 100%;
-	text-align: center;
-	color: #000;
-	text-transform: uppercase;
-}
-
-.ptext-bottom {
-	position: absolute;
-	top: 30%;
-	width: 100%;
-	text-align: center;
-	color: #000;
-	text-transform: uppercase;
-}
-
-.border {
-	border-radius: 15px;
-}
-
-.ptext-bottom .border {
-	background-color: rgba(0,0,0,0.5);
-	color: #FFF;
-	padding: 20px;
-}
-
-.ptext .border {
-	background-color: rgba(0,0,0,0.5);
-	color: #FFF;
-	padding: 20px;
-}
-
-.ptext .border .trans{
-	background-color: transparent;
 }
 
 a {
@@ -103,12 +20,11 @@ a:hover {
 	width: 25%;
 }
 
-.card {
-	width: 400px;
-	height: 400px;	
-}
 
 .card-body {
 	height: 100%;
 	width: 100%;
+	font-size: 20px;
+	font-weight: 600;
+	color: #FFFFFF;
 }

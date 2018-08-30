@@ -1,21 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
-body, html {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-}
-
-a:link, a:hover, a:visited, a:active {
-	text-decoration: none;
-}
-
 .pimg1, .pimg2, .pimg3 {
 	position: relative;
-	opacity: 0.90;
+	opacity: 0.80;
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+}
+
+.events-landing-image {
+  height: 75vh;
+	background-image: url(../../../assets/images/extra_content/calendar.jpg);
 }
 
 .pimg1 {
@@ -91,4 +85,26 @@ a:link, a:hover, a:visited, a:active {
 
 .ptext .border .trans{
 	background-color: transparent;
+}
+
+.card {
+	max-width: 33%;
+}
+
+.card-img-top {
+	max-height: 300px;
+}
+
+.location {
+	font-weight: bold;
+	font-style: italic;
+}
+
+.location a {
+	text-decoration: none;
+	color: #000;
+}
+
+.location a:hover {
+	text-decoration: none;
 }

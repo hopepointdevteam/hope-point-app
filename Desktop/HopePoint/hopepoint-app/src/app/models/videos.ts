@@ -7,7 +7,7 @@ export interface Video {
       "channelId": string,
       "playlistId": string
     },
-    "items": [object],
+    "items": [any[]],
     "snippet": {
       "publishedAt": string,
       "channelId": string,

@@ -11,16 +11,18 @@
   <h2><strong>Find a ministry that fits your desires</strong></h2>
 </section>
 <div>
-    <div class="card-columns pt-5 px-5">
-      <div class="card mx-auto my-3" *ngFor="let m of ministries">
-        <a href="{{m.href}}">
-          <div class="card-body" [ngStyle]="{ 'background-image': 'url(' + m.ImgUrl + ')',  'background-size': 'cover',
-          'background-repeat': 'no-repeat' }">
-            <div class="d-flex mx-auto align-content-center ">
-              <img src="{{m.logoUrl}}" class="img-fluid flex-fill small-img">
+  <div class="card-columns pt-md-3">
+    <div class="card mx-auto" *ngFor="let m of ministries">
+      <a href="{{m.href}}">
+        <div class="card-body p-0">
+            <div [ngStyle]="{ 'background-image': 'url(' + m.ImgUrl + ')',  'background-size': 'cover',
+            'background-repeat': 'no-repeat', 'height': '300px' }">
+              <div class="my-auto mx-auto">
+                <p>{{m.name}}</p>
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
+        </div> 
+      </a>
     </div>
   </div>
+</div>

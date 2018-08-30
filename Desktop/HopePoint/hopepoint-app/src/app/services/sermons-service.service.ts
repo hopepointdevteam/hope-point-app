@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { Observable } from '../../../node_modules/rxjs';
+import { Observable } from 'rxjs';
 
 import { Video } from '../models/videos';
 
@@ -22,6 +22,6 @@ export class SermonsService {
     const headers = new HttpHeaders({'Content-Type': 'application/json'});
     return headers;
   }
-
+ 
   
 }

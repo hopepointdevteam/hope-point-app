@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SermonsService } from '../../services/sermons-service.service';
-import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
+import { DomSanitizer, SafeResourceUrl, SafeUrl, Meta, Title } from '@angular/platform-browser';
 
-import { Video } from '../../models/videos';
+import { Video } from '../../models/videos'; 
 
 @Component({
   selector: 'app-sermons',
@@ -10,12 +10,14 @@ import { Video } from '../../models/videos';
   styleUrls: ['./sermons.component.css']
 })
 
-
 export class SermonsComponent implements OnInit {
-  sermons: Video[];
+  sermons: any;
   clips = [];
   
-  constructor(private _sermonService: SermonsService, private sanitizer: DomSanitizer){}
+  constructor(private _sermonService: SermonsService, private sanitizer: DomSanitizer, private meta: Meta, private title: Title){
+    // this.meta.addTag({''})
+    this.title.setTitle('Hope Point Sermons')
+  }
   
   ngOnInit(){
     if(!this.sermons){
@@ -24,11 +26,13 @@ export class SermonsComponent implements OnInit {
   }
   loadSermons(){
     this._sermonService.getVideos().subscribe(sermons => {
-      this.sermons = sermons.items;
+      this.sermons = sermons;
     })
   }
   
   sanatizeUrl(url){
     return this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + url);
   }
+
+
 }

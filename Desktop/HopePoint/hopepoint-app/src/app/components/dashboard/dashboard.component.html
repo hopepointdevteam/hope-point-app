@@ -14,10 +14,32 @@
 </p>
 </section>
 <section class="section section-dark">
-  	<h2>Fellowship</h2>
-    <p>
-      Find a group to grow and bond with at The Table
-    </p>
+  <div class="row">
+    <div class="col-sm-4 col-xs-12 text-white">
+        <h3 class="text-center">When?</h3>
+        <ul class="list-group list-group-flush text-left">
+          <li class="list-group-item">Saturday -- House of Prayer @ 6:00pm</li>
+          <li class="list-group-item">Sunday -- Service @ 9:15am</li>
+          <li class="list-group-item">Sunday -- Service @ 11:15am</li>
+          <li class="list-group-item">Wednesday -- Small Groups @ 6:00pm</li>
+        </ul>
+    </div>
+    <div class="col-sm-4 col-xs-12">
+      <h3 class="text-center">We would like to welcome you</h3>
+      <p>Come by the <a routerLink="/patio" class="text-primary">Brick Patio</a> before or after any service. Our staff is happy and eager to meet you!</p>
+    </div>
+    <div class="col-sm-4 col-xs-12 text-left">
+      <h2>Fellowship</h2>
+      <p>
+        Find a group to grow and bond with by visiting the 
+      
+        <a routerLink="/table" class="text-primary">The Table</a><br>
+      
+        on Wednesday nights at 6:00 pm
+      </p>
+    </div>
+  </div>
+  	
 </section>
 <div class="pimg3 table-image">
   <a href="table" class="span-link">
@@ -56,11 +78,11 @@
           <h3>{{member.name}}</h3>
           <p>{{member.title}}<br>
             <small>
-              <a href="{{member.facebook}}" target="_blank">Facebook</a>
+              <a href="{{member.facebook}}" class="text-primary" target="_blank">Facebook</a>
             </small>
             <br>
             <small>
-              <a href="{{member.twitter}}" target="_blank">@{{member.name}}</a>
+              <a href="{{member.twitter}}" class="text-primary" target="_blank">@{{member.name}}</a>
             </small>
           </p>
     </div>

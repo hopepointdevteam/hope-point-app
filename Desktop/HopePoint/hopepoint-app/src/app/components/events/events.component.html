@@ -1,3 +1,31 @@
-<div class="container">
-  <p>Events works!</p>
+<div class="pimg1 events-landing-image">
+  <div class="ptext">
+    <h3>
+      <span class="border">
+       Hope Point Events
+      </span>
+    </h3>
+  </div>
 </div>
+<div class="container p-md-5 p-xs-0 p-sm-0 public-calendar">
+    <h3 class="text-center">Our public calendar is available for you</h3>
+    <div class="embed-responsive embed-responsive-1by1">
+      <iframe class="embed-responsive-item" src="https://myhopepoint.ccbchurch.com/w_calendar.php"></iframe>
+    </div>
+  </div>
+<!-- <div class="container p-5">
+  <div class="card-columns">
+   
+      <div *ngFor="let e of events">
+        <a href="events/{{e['@attributes'].id}}">
+        <div class="card shadow-lg bg-white">
+          <div class="card-header tex-center">
+            {{e.name}}
+          </div>
+          <div class="card-body" [innerHTML]="e.public_calendar_listed == 'true' ? sanatizeHtml(e.description) : 'Details coming soon'"></div>
+        </div>
+        </a>
+      </div>
+    
+  </div>
+</div> -->
