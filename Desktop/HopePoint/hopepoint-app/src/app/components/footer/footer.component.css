@@ -1,9 +1,35 @@
-a {
-  color: #ffffff;
+.page-footer a {
+  color: #000000;
   font-weight: bold;
   text-decoration: none;
 }
 
+.black {
+  color: #111111;
+}
+
+.white {
+  color: #FFF;
+}
+
 hr {
   background-color: #FFF;
+}
+
+.page-footer {
+  height: 75vh;
+  text-shadow: 1px 1px #737373;
+}
+
+.page-footer-image { 
+  background-image: url(../../../assets/images/Believe_BG.jpg);
+	background-position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+
+.footer-links, .app-container {
+  max-width: 60%;
 }
