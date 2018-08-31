@@ -4,7 +4,7 @@
 /dist
 /tmp
 /out-tsc
-/api
+/ignore
 /data
 
 # dependencies
@@ -35,7 +35,7 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
-
+/api/email/send-mail.php
 # System Files
 .DS_Store
 Thumbs.db
