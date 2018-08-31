@@ -12,7 +12,7 @@
 .dark {
 	width: 100%;
 	position: fixed;
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.75);
 	z-index: 1;
 }
 
@@ -23,7 +23,8 @@
 
 .nav-link {
   font-size: 20px;
-  color: #FFF !important;
+	color: #FFF !important;
+	font-weight: 600;
 }
 
 .navbar .navbar-expand-md .navbar-dark .nav-link a:hover {
@@ -37,6 +38,10 @@
 
 .navbar-toggler:focus, .navbar-toggler:active {
 	border: none;
+}
+
+.navbar-collapse {
+	background-color: #000;
 }
 
 @media screen and (max-width: 576px){

@@ -18,8 +18,8 @@ export class NavbarComponent implements OnInit {
  
 
   ngOnInit() {
-    this.NavClass = 'navbar navbar-expand-lg navbar-dark fixed-top';
-    this.TogglerClass =  'collapse navbar-collapse';
+    this.NavClass = 'navbar navbar-expand-lg navbar-dark fixed-top shadow';
+    this.TogglerClass =  'collapse navbar-collapse p-3';
    }
 
   
@@ -28,9 +28,9 @@ export class NavbarComponent implements OnInit {
  
      const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
      if(number < 10) {
-      this.NavClass = 'navbar navbar-expand-md navbar-dark fixed-top';
+      this.NavClass = 'navbar navbar-expand-md navbar-dark fixed-top shadow';
      } else {
-      this.NavClass = 'navbar navbar-expand-md navbar-dark fixed-top dark';
+      this.NavClass = 'navbar navbar-expand-md navbar-dark fixed-top dark shadow';
      }
  
    }
