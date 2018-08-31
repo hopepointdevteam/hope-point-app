@@ -47,14 +47,12 @@ export class FooterComponent implements OnInit {
     } else {
       this.downloadLink = 'desktop'
     }
-    console.log(this.downloadLink)
   } 
 
   sendMessage({value, valid}: {value: Message, valid: boolean}){
     if(!valid){
         console.log('Form is not valid');
     } else {
-      console.log(value);
       this.messageConfirmationHidden = false;
       this.hidden = true;
       //TODO: add send logic
