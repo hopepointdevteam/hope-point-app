@@ -37,8 +37,20 @@ a:visited {
 	max-width: 60%;
 }
 
-.pastors {
-	max-width: 75%;
+@media (max-width: 576px){
+	.carousel-item {
+		font-size: 14px;
+	}
+	.carousel-item h3 {
+		font-size: 16px;
+	}
+	.carousel-indicators {
+		bottom: -20px !important;
+	}
+}
+
+.carousel-indicators {
+	bottom: -50px;
 }
 
 .carousel-indicators li {
@@ -51,6 +63,14 @@ a:visited {
 
 .carousel-item {
 	height: 300px;
+}
+
+.carousel-control-prev {
+	left: 0;
+}
+
+.carousel-control-next {
+	right: 0;
 }
 
 .carousel-control-prev, .carousel-control-next {
