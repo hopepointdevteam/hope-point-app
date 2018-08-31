@@ -47,6 +47,9 @@ a:visited {
 	.carousel-indicators {
 		bottom: -20px !important;
 	}
+	.info {
+		max-width: 90% !important;
+	}
 }
 
 .carousel-indicators {
@@ -78,4 +81,10 @@ a:visited {
 }
 .carousel-control-prev-icon, .carousel-control-next-icon {
 	background-image: none;
+}
+
+.pastors {
+	background: #3e5151; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #3e5151, #decba4); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #3e5151, #decba4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
