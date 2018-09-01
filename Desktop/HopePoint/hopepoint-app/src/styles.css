@@ -18,8 +18,8 @@ a:link, a:hover, a:visited, a:active {
 .pimg1, .pimg2, .pimg3 {
 	position: relative;
 	opacity: 0.90;
-	background-position: center center;
-	background-size: cover;
+	background-position: center;
+	background-size: 100%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }

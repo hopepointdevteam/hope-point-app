@@ -25,7 +25,7 @@ hr {
 }
 
 .page-footer-image { 
-  background-image: url(../../../assets/images/Believe_BG.jpg);
+  background-image: url(/assets/images/backgrounds/Believe_BG.jpg);
 	background-position: right top;
 	background-size: cover;
 	background-repeat: no-repeat;

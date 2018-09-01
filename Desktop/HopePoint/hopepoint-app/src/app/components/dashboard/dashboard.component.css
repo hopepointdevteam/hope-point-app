@@ -1,15 +1,27 @@
 .dashboard-landing-image {
   height: 75vh;
-	background-image: url(../../../assets/images/landing.jpg);
+	background-image: url(/assets/images/backgrounds/landing.jpg);
 }
-
 .table-image {
-	background-image: url(../../../assets/images/TheTable_BG.jpg);
+	background-image: url(/assets/images/backgrounds/TheTable_BG.jpg);
 }
 
 .prayer-image {
-	background-image: url(../../../assets/images/extra_content/worship_1.jpg);
+	background-image: url(/assets/images/extra_content/worship_1.jpg);
 }
+@media (max-width: 768px){
+	.dashboard-landing-image {
+		background-image: url(/assets/images/mobile/mobile_landing.jpg);
+	}
+	.table-image {
+		background-image: url(/assets/images/logos/The_Table_Logo_350x350.png);
+	}
+	
+	.prayer-image {
+		background-image: url(/assets/images/mobile/mobile_worship.jpg);
+	}
+}
+
 
 img {
 	height: 200px;

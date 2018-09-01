@@ -1,12 +1,12 @@
 .belief-image {
   height: 75vh;
-  background-image: url(../../../assets/images/Believe_BG.jpg);
+  background-image: url(/assets/images/backgrounds/Believe_BG.jpg);
 }
 
 .mission-image {
-  background-image: url(../../../assets/images/Vision_BG.jpg);
+  background-image: url(/assets/images/backgrounds/Vision_BG.jpg);
 }
 
 .campus-image {
-  background-image: url(../../../assets/images/Visit_BG.jpg);
+  background-image: url(/assets/images/backgrounds/Visit_BG.jpg);
 }
