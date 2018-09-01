@@ -7,5 +7,5 @@ export const AllMinistries: Ministry[] = [
   {id: 3, name: "Kids", href: "ministries/kids", ImgUrl: "/preview/assets/images/backgrounds/HPKids_BG.jpg", logoUrl: "/preview/assets/images/logos/Kids_Logo_350x350.png", MinistryGroup: 'Family'},
   {id: 4, name: "Club 45", href: "ministries/club45", ImgUrl: "/preview/assets/images/backgrounds/Club45_BG.jpg", logoUrl: "/preview/assets/images/logos/Club45_Logo_350x350.png", MinistryGroup: 'Family'},
   {id: 5, name: "Jr. High", href: "ministries/jrhigh", ImgUrl: "/preview/assets/images/backgrounds/JrHigh_BG.jpg", logoUrl: "/preview/assets/images/logos/YF_JrHigh_logo_350x350.png", MinistryGroup: 'Family'},
-  {id: 6, name: "High School", href: "ministries/highshcool", ImgUrl: "/preview/assets/backgrounds/images/hs.jpg", logoUrl: "/preview/assets/images/logos/YF_High_logo_350x350.png", MinistryGroup: 'Family' }
+  {id: 6, name: "High School", href: "ministries/highshcool", ImgUrl: "/preview/assets/images/backgrounds/hs.jpg", logoUrl: "/preview/assets/images/logos/YF_High_logo_350x350.png", MinistryGroup: 'Family' }
 ]
