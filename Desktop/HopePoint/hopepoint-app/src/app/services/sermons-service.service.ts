@@ -9,7 +9,7 @@ import { Video } from '../models/videos';
   providedIn: 'root'
 })
 export class SermonsService {
-  sermonsUrl = string;
+  sermonsUrl = 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyDBE59hcg5FuOcnLwYKYayl7KMsqa6tXww&channelId=UCZoJnP9s_Wxd0HPzl47evyA&part=snippet,id&order=date&maxResults=5';
 
 
   constructor(private http: HttpClient) { }
