@@ -155,6 +155,21 @@ a:link, a:hover, a:visited, a:active {
 	background-image: none;
 }
 
-.modal-body {
-	-webkit-overflow-scrolling: touch;
+
+@media (max-width: 576px) {
+
+	.modal {
+			height: 500px; /* Set a default max height of the modal (adjusted later)*/
+			position: fixed; /* Display modal in the centre of your screen */
+			overflow-y: scroll; /*  Ensure that the modal is scroll-able */
+			-webkit-overflow-scrolling: touch; /* Avoid having to use 2 finger scroll on iOS    */
+	}
+	.modal.fade.in{
+			top: 5px; /* Use more screen real estate */
+	}
+	.modal-body{
+			/* Increase the max height of the modal body to try & avoid both it,
+			 * and the modal container having scroll bars which results in odd behavior */ 
+			max-height: 100%; 
+	}   
 }
