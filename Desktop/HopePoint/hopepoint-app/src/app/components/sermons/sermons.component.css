@@ -3,41 +3,16 @@
 	background-image: url(/assets/images/backgrounds/Sermons_BG.jpg);
 }
 
-.carousel-control-prev,
-.carousel-control-next{
-      bottom: 95%;
+.carousel {
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #000000, #434343); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #000000, #434343); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.img-grow:hover
-{
-    box-shadow: 0px 0px 150px #000000;
-    z-index: 2;
-    -webkit-transition: all 200ms ease-in;
-    -webkit-transform: scale(1.5);
-    -ms-transition: all 200ms ease-in;
-    -ms-transform: scale(1.5);
-    -moz-transition: all 200ms ease-in;
-    -moz-transform: scale(1.5);
-    transition: all 200ms ease-in;
-    transform: scale(1.5);
-}
-
-iframe {
-  height: 100%;
-  width: 100%;
-}
-
-.card-header {
-  height: 315px;
-  width: 560x;
-}
 .fa-arrow-right,.fa-arrow-left {
   color: #000000;
 }
 
-.card-body {
-  color: #000000;
-}
 
 .fa-youtube-square {
 	color: red;

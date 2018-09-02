@@ -7,44 +7,42 @@
     </h3>
   </div>
 </div>
-<div class="container bg-light py-3">
+<!-- <div class="container bg-light py-3"> -->
     <div class="carousel slide" data-interval="false" id="hopePointVideos">        
+        <!-- <ul class="carousel-indicators">
+          <li *ngFor="let s of sermons?.items; index as i" data-target="#hopePointVideos" data-slide-to="0" [ngClass]="i == 0 ? 'active' : ''"></li>
+        </ul> -->
         <div class="carousel-inner">
-          <div class="carousel-item responsive-item" *ngFor="let s of sermons?.items; index as i" [ngClass]="i == 0 ? 'active' : ''">
-              <div class="card w-50 mx-auto my-auto">
-                  <div class="card-header">
-                      <iframe 
-                        [src]="sanatizeUrl(s.id.videoId)" 
-                        frameborder="0" 
-                        allow="encrypted-media" 
-                        allowfullscreen
-                      >
-                      </iframe>
-                  </div>
-                  <div class="card-body">
-                      <h4 class="card-title">{{s.snippet.title}}</h4>
-                      <p class="card-text">{{s.snippet.channelTitle}}</p>
-                      <p class="card-text">{{s.snippet.description}}</p>
-                  </div>
-                  <div class="card-footer d-inline-flex">
-                    <div class="p-2">
-                      <a class="w-100 h-100" href="#hopePointVideos" data-slide="prev">
-                        <span><i class="fa fa-arrow-left fa-2x"></i></span>
-                      </a>
-                    </div>
-                    <div class="flex-grow-1 mx-auto">        
-                    </div>
-                    <div class="p-2">
-                      <a class="w-100 h-100" href="#hopePointVideos" data-slide="next">
-                        <span><i class="fa fa-arrow-right fa-2x"></i></span>
-                      </a>
-                    </div>
-                  </div>
+          <div class="carousel-item p-0 p-md-3 mx-auto w-75 h-100" *ngFor="let s of sermons?.items; index as i" [ngClass]="i == 0 ? 'active' : ''">
+              <div class="embed-responsive embed-responsive-21by9">
+                <iframe 
+                  class="embed-responsive-item" 
+                  [src]="sanatizeUrl(s.id.videoId)" 
+                  frameborder="0" 
+                  allow="encrypted-media" 
+                  allowfullscreen
+                  >
+                </iframe>
+              </div>
+              <div class="row bg-light">
+                <div class="col-xs-12 d-none">
+                  <h3 class="text-center">{{s.snippet.title}}</h3>
+                </div>
+                <div class="col-xs-12 d-none">
+                  <p class="text-left">{{s.snippet.channelTitle}}</p>
+                  <p class="text-left">{{s.snippet.description}}</p>
+                </div>
               </div>
           </div>
         </div>
+          <a class="carousel-control-prev" href="#hopePointVideos" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#hopePointVideos" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
       </div>
-</div>
+<!-- </div> -->
 <section class="section sectoin-light">
   <div class="container">
     <h4 class="text-center">For more sermons please visit our Youtube channel</h4>
