@@ -1,8 +1,3 @@
-.patio-landing-image {
-  height: 75vh;
-	background-image: url(/assets/images/backgrounds/BrickPatio_BG.jpg);
-}
-
 a {
 	color: #000000;
 }
@@ -11,6 +6,3 @@ a {
 	background-color: rgba(0,0,0,0);
 }
 
-.groups {
-	background-color: #282E34;
-}

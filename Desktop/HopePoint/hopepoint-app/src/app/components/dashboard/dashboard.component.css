@@ -1,59 +1,61 @@
-.dashboard-landing-image {
-  height: 75vh;
-	background-image: url(/assets/images/backgrounds/landing.jpg);
-}
-.table-image {
-	background-image: url(/assets/images/backgrounds/TheTable_BG.jpg);
-}
-
-.prayer-image {
-	background-image: url(/assets/images/extra_content/worship_1.jpg);
-}
-@media (max-width: 768px){
-	.dashboard-landing-image {
-		background-image: url(/assets/images/mobile/jesus_bg.jpg);
-	}
-	.table-image {
-		background-image: url(/assets/images/logos/The_Table_Logo_350x350.png);
-	}
-	
-	.prayer-image {
-		background-image: url(/assets/images/mobile/mobile_worship.jpg);
-	}
-}
-
-
-img {
-	height: 200px;
-	width: 200px;
-}
-
-a {
-	color: #FFF;
-	text-decoration: none;
-}
-
-a:active {
-	text-decoration: none;
-}
-
-a:visited {
-	text-decoration: none;
-}
-
 .list-group-item {
 	background-color: rgba(0,0,0,0)
 }
 
-.info {
-	max-width: 60%;
+.mb40{margin-bottom:40px;}
+.team-block { margin-bottom: 20px; }
+.team-content { position: absolute; background-color: rgba(17, 24, 31, 0.8); bottom: 0px; width: 100%; color: #fff; padding: 30px; }
+.team-img { position: relative; }
+.team-img img { width: 100%; }
+.team-title { }
+.team-meta { color: #9da4aa; font-weight: 400; font-size: 16px; }
+
+@media (max-width: 450px){
+	.team-img img {
+		width: 300px; 
+	}
+	.team-content {
+		width: 300px;
+		
+	}
+	.team-block {
+		padding-left: 2.5rem;
+	}
 }
 
-.pastors {
-	background: #3e5151; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #3e5151, #decba4); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #3e5151, #decba4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+@media (min-width: 451px) and (max-width: 575px){
+	.team-img img {
+		width: 400px; 
+	}
+	.team-content {
+		width: 400px;
+		
+	}
+	.team-block {
+		padding-left: 5rem;
+	}
 }
-.pastors a {
-	text-shadow: 1px 1px #333;
+@media (min-width: 576px) and (max-width: 768px){
+	.team-img img {
+		width: 400px; 
+	}
+	.team-content {
+		width: 400px;
+		
+	}
+	.team-block {
+		padding-left: 5rem;
+	}
+}
+@media (min-width: 769px) and (max-width: 991px){
+	.team-img img {
+		width: 500px;
+	}
+	.team-content {
+		width: 500px;
+		
+	}
+	.team-block {
+		padding-left: 5rem;
+	}
 }

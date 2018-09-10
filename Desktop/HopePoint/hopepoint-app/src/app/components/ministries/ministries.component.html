@@ -1,28 +1,34 @@
-<div class="pimg1 ministry-landing-image">
-  <div class="ptext">
-    <h4>
-      <span class="border">
-        HOPE POINT Ministries 
-      </span>
-    </h4>
-  </div>
-</div>
-<section class="section section-dark">
-  <h2><strong>Find a ministry that fits your desires</strong></h2>
-</section>
-<div class="p-0 p-md-3 gradient">
-  <div class="card-columns pt-md-3 mx-auto w-75">
-    <div class="card mx-auto" *ngFor="let m of ministries">
-      <a href="{{m.href}}">
-        <div class="card-body p-0">
-            <div [ngStyle]="{ 'background-image': 'url(' + m.ImgUrl + ')',  'background-size': 'cover',
-            'background-repeat': 'no-repeat', 'height': '300px' }">
-              <div class="my-auto mx-auto">
-                <p>{{m.name}}</p>
-              </div>
-            </div>
-        </div> 
-      </a>
+<section class="page-section pt-2 clearfix">
+    <div class="container">
+      <div class="intro">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" [src]="base + '/assets/images/extra_content/bible_pages_turning.jpg'" alt="Welcome Center">
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4">
+            <span class="section-heading-upper">Hope Point Nazarene</span>
+            <span class="section-heading-lower">Ministry Panel</span>
+          </h2>
+          <p class="mb-3">
+            Hope Point offers ministries for all members of our family. Feel free to visit our ministry pages below.
+          </p>
+        </div>
+      </div>
     </div>
+  </section>
+<section class="page-section">
+  <div class="container">
+      <div class="card-columns">
+          <div class="card" *ngFor="let m of ministries">
+            <a href="{{m.href}}">
+              <div class="card-body p-0">
+                  <div [ngStyle]="{ 'background-image': 'url(' + base + m.ImgUrl + ')',  'background-size': 'cover',
+                  'background-repeat': 'no-repeat', 'height': '300px' }">
+                    <div class="my-auto mx-auto">
+                      <p>{{m.name}}</p>
+                    </div>
+                  </div>
+              </div> 
+            </a>
+          </div>
+        </div>
   </div>
-</div>
+</section>

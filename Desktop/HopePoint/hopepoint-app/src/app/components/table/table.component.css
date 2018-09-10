@@ -1,4 +1,31 @@
 .table-landing-image {
-  height: 75vh;
 	background-image: url(/assets/images/backgrounds/TheTable_BG.jpg);
+}
+
+.logo {
+  padding-top: 5%;
+}
+
+@media (max-width: 576px){
+  .logo {
+    padding-top: 50%;
+  }
+  p {
+    text-align: justify;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #222;
+}
+
+a:active {
+  text-decoration: none;
+  color: #222;
 }

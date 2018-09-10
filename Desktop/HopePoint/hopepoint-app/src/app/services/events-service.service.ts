@@ -1,17 +1,27 @@
 import { Injectable} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Event } from '../../../build/models/event';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EventsService {
-  url = 'http://localhost:4200/data/events.json';
-  
+  event: Event[];
+  base: any;
   constructor(private http: HttpClient) { }
 
-  getEvents(): Observable<any[]> {
-    return this.http.get<any[]>(this.url)
+  getEvents(): Observable<any> {
+    this.base = window.location.href 
+    this.base = /(http\:\/\/[a-z\.\:0-9]+)\/([a-z]+)*\/*/g.exec(this.base);
+    if(this.base[2] != 'preview' || !this.base[2]){
+      this.base = this.base[1] + '/'
+    } else {
+      this.base = this.base[1] + '/' + this.base[2] + '/'
+    }
+    var url = this.base + 'data/events.json';
+    return this.http.get<Event[]>(url, {headers: this.GetHttpHeaders()})
+    // return this.http.post(url,{headers: this.GetHttpHeaders()})
   }
 
   GetHttpHeaders() : HttpHeaders{
@@ -24,7 +34,7 @@ export class EventsService {
   }
 
   getEvent(id: number): Observable<any[]>{
-    const url = 'http://localhost:4200/data/events.json';
+    const url = '/data/events.json';
   
     const obj = this.http.get<any>(url);
    

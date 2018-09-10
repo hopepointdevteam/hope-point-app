@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 
-import { Video } from '../models/videos';
+import { Video } from '../../../build/models/videos';
 
 @Injectable({
   providedIn: 'root'

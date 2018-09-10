@@ -1,115 +1,98 @@
-<div class="pimg1 dashboard-landing-image">
-  <div class="ptext">
-    <h2>
-      <span class="border">
-        WELCOME HOME
-      </span>
-    </h2>
-  </div>
-</div> 
-<section class="section section-light">
-<h2><strong>Hope Point Nazarene</strong></h2>
-<p class="text-justify">
-  Welcome to Hope Point Nazarene Church in Yuba City. We are a community oriented family and we welcome you to join!
-  We live by our moto is "Welcome Home" and will <strong>never</strong> turn anyone away. Everyone here will welcome you with open arms.
-  Our sermons are rooted in the teachings of the Bible and delivered by the Holy Spirit. Join our family today!
-</p>
-</section>
-<div class="section-dark p-3">
-  <div id="hpInfo" class="carousel slide mx-auto" data-ride="carousel">
-
-    <!-- Indicators -->
-    <ul class="carousel-indicators">
-      <li data-target="#hpInfo" data-slide-to="0" class="active"></li>
-      <li data-target="#hpInfo" data-slide-to="1"></li>
-      <li data-target="#hpInfo" data-slide-to="2"></li>
-    </ul>
-  
-    <!-- The slideshow -->
-    <div class="carousel-inner mx-auto p-2 info">
-
-      <div class="carousel-item m-auto p-3 active">
-          <h3 class="text-center">When?</h3>
-          <ul class="list-group list-group-flush text-left">
-            <li class="list-group-item">Saturday -- House of Prayer @ 6:00pm</li>
-            <li class="list-group-item">Sunday -- Service @ 9:15am</li>
-            <li class="list-group-item">Sunday -- Service @ 11:15am</li>
-            <li class="list-group-item">Wednesday -- Small Groups @ 6:00pm</li>
-          </ul>
+<section class="page-section pt-2 clearfix">
+  <div class="container">
+    <div class="intro">
+      <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" [src]="base + '/assets/images/backgrounds/landing.jpg'" alt="Welcome Home">
+      <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+        <h2 class="section-heading mb-4">
+          <span class="section-heading-upper">Hope Point Nazarene</span>
+          <span class="section-heading-lower">Welcome Home</span>
+        </h2>
+        <p class="mb-3">
+            "They committed themselves to the teaching of the apostles, the life together, the common meal, and the prayers." - Acts 2:42
+        </p>
+        <div class="intro-button mx-auto">
+          <a class="btn btn-dark btn-xl" routerLink="/about-hope-point">Learn More Today!</a>
+        </div>
       </div>
-
-      <div class="carousel-item m-auto p-3">
-          <h3 class="text-center">We would like to welcome you</h3>
-          <p class="text-center">Come by the <a routerLink="/patio" class="text-primary">Brick Patio</a> before or after any service. Our staff is happy and eager to meet you!</p>
-      </div>
-
-      <div class="carousel-item m-auto p-3">
-          <h2 class="text-center">Fellowship</h2>
-          <p class="text-center">
-            Find a group to grow and bond with by visiting the 
-          
-            <a routerLink="/table" class="text-primary">The Table</a><br>
-          
-            Wednesday nights at 6:00 pm
-          </p>
-      </div>
-
-    </div>
-  
-    <!-- Left and right controls -->
-    <a class="carousel-control-prev" href="#hpInfo" data-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#hpInfo" data-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </a>
-  
-  </div>  	
-</div>
-<div class="pimg3 table-image">
-  <a href="table" class="span-link">
-    <div class="ptext mx-auto">
-      <h2>
-          <span class="border trans">
-            The Table
-          </span>
-      </h2>
-    </div>
-  </a>
-</div>
-<section class="section section-light">
-  <h1 class="text-center text-dark">Join us in prayer</h1>
-  <h5 class="text-center text-dark">Every Saturday at 6:00pm</h5>
-</section>
-<div class="pimg2 prayer-image">
-  <a href="prayer" class="span-link">
-    <div class="ptext mx-auto">
-      <h2>
-          <span class="border trans">
-            House of Prayer
-          </span>
-      </h2>      
-    </div>
-  </a>
-</div>
-<section class="section pastors section-light">
-  <div class="row mx-auto">
-    <div class="col-12">
-      <h3 class="text-center text-dark">Our Pastors</h3>
-    </div>
-    <div class="col-lg-4 col-sm-6 text-center mb-4 pt-5" *ngFor="let member of staffMembers">
-        <img class="rounded-circle img-fluid d-block mx-auto" src="{{member.ImgUrl}}" alt="{{member.name}}" >
-        
-          <h3>{{member.name}}</h3>
-          <p>{{member.title}}<br>
-            <small>
-              <a href="{{member.facebook}}" class="text-white" target="_blank">Facebook</a>
-            </small>
-            <br>
-            <small>
-              <a href="{{member.twitter}}" class="text-white" target="_blank">@{{member.name}}</a>
-            </small>
-          </p>
     </div>
   </div>
 </section>
+<section class="page-section cta">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-9 mx-auto">
+        <div class="cta-inner text-center rounded">
+            <h3 class="text-center">Services</h3>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Saturday -- House of Prayer @ 6:00pm</li>
+              <li class="list-group-item">Sunday -- Service @ 9:00am</li>
+              <li class="list-group-item">Sunday -- Service @ 11:00am</li>
+              <li class="list-group-item">Wednesday -- Small Groups @ 6:00pm</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="page-section pt-2 clearfix">
+    <div class="container">
+      <div class="intro">
+        <img class="intro-img-left img-fluid mb-3 mb-lg-0 rounded" [src]="base + '/assets/images/backgrounds/TheTable_BG.jpg'" alt="Hope Point Tables">
+        <div class="intro-text-right left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4">
+            <span class="section-heading-lower">THE TABLE</span>
+          </h2>
+          <p class="mb-3">
+              
+              The Table is a starting point where people can explore faith and experience community. This is where the big church becomes small. Everyone has a seat at The Table. Join us Wednesday nights at 6:30 as we share a meal and build relationship with God and each other.  
+          </p>
+          <div class="intro-button mx-auto">
+            <a class="btn btn-dark btn-xl" routerLink="/the-table">More Info!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="page-section cta">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <div class="cta-inner text-center rounded">
+              <h2 class="section-heading">
+                <span class="section-heading-upper">Join us in prayer</span>
+                <span class="section-heading-lower">Every Saturday at 6:00pm</span>                
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="mx-auto mt-2">
+            <a class="btn btn-dark btn-xl" routerLink="/house-of-prayer">House of Prayer</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page-section clearfix">
+      <div class="container">
+          <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb40 text-center text-white"> 
+                <h1>Our Pastoral Team</h1>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12" *ngFor="let member of staffMembers">
+                  <div class="team-block mx-auto">
+                      <div class="team-img">
+                          <img [src]="base + member.ImgUrl" alt="{{member.name}}">
+                          <div class="team-content">
+                              <h4 class="text-white mb0">{{member.name}}</h4>
+                              <p class="team-meta">- {{member.title}}</p>
+                              
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+    </section>

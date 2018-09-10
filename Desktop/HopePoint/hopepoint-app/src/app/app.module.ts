@@ -4,24 +4,23 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+import { FlashMessagesModule } from 'angular2-flash-messages';
 // Services
 import { SermonsService } from './services/sermons-service.service';
 import { EventsService } from './services/events-service.service';
+import { SendMessageService } from './services/send-message.service';
 
 //Components
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { EventsComponent } from './components/events/events.component';
 import { SermonsComponent } from './components/sermons/sermons.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { MensMinistryComponent } from './components/mens-ministry/mens-ministry.component';
 import { LadiesMinistryComponent } from './components/ladies-ministry/ladies-ministry.component';
 import { CruisersMinistryComponent } from './components/cruisers-ministry/cruisers-ministry.component';
 import { BrickPatioComponent } from './components/brick-patio/brick-patio.component';
-import { NavbarMinistryModalComponent } from './components/navbar-ministry-modal/navbar-ministry-modal.component';
 import { FilterPipePipe } from './pipes/filter-pipe.pipe';
 import { DeviceDetectorModule } from 'ngx-device-detector';
 import { TableComponent } from './components/table/table.component';
@@ -30,20 +29,22 @@ import { AboutComponent } from './components/about/about.component';
 import { BahamasComponent } from './components/bahamas/bahamas.component';
 import { HouseOfPrayerComponent } from './components/house-of-prayer/house-of-prayer.component';
 import { MinistriesComponent } from './components/ministries/ministries.component';
-import { EventComponent } from './components/event/event.component';
+import { OutreachComponent } from './components/outreach/outreach.component';
+import { ProjectHopeComponent } from './components/project-hope/project-hope.component';
+import { KidsMinistryComponent } from './components/kids-ministry/kids-ministry.component';
+import { Club45MinistryComponent } from './components/club45-ministry/club45-ministry.component';
+import { JrhighMinistryComponent } from './components/jrhigh-ministry/jrhigh-ministry.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     DashboardComponent,
-    EventsComponent,
     SermonsComponent,
     NotFoundComponent,
     MensMinistryComponent,
     LadiesMinistryComponent,
     BrickPatioComponent,
-    NavbarMinistryModalComponent,
     FilterPipePipe,
     TableComponent,
     FooterComponent,
@@ -52,7 +53,11 @@ import { EventComponent } from './components/event/event.component';
     HouseOfPrayerComponent,
     MinistriesComponent,
     CruisersMinistryComponent,
-    EventComponent  
+    OutreachComponent,
+    ProjectHopeComponent,
+    KidsMinistryComponent,
+    Club45MinistryComponent,
+    JrhighMinistryComponent  
   ],
   imports: [
     BrowserModule,
@@ -60,11 +65,13 @@ import { EventComponent } from './components/event/event.component';
     DeviceDetectorModule.forRoot(),
     FormsModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FlashMessagesModule.forRoot()
   ],
   providers: [
     SermonsService,
-    EventsService
+    EventsService,
+    SendMessageService
   ],
   bootstrap: [
     AppComponent

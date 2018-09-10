@@ -1,11 +1,8 @@
 <nav [ngClass]="NavClass">
     <!-- Brand -->
-    <a class="navbar-brand pl-md-2" routerLink="/">
+    <a class="navbar-brand" routerLink="/">
       <span>
-        <img 
-          src="/preview/assets/images/logos/website-logo-wht.png" 
-          class="img-fluid logo"
-        >
+        <img [src]="base + '/assets/images/logos/website-logo-wht.png'" class="img-fluid logo" >
       </span>  
     </a>  
     <!-- Toggler/collapsibe Button -->
@@ -19,9 +16,7 @@
       aria-controls="HopePointNav"
     >
       <span>
-        <img 
-          class="navbar-toggler-icon" 
-        >
+        <img class="navbar-toggler-icon">
       </span>
     </button>
 
@@ -31,49 +26,37 @@
       <!-- List of Links -->
       <ul class="navbar-nav ml-auto pr-2">
         <li class="nav-item">
-          <a 
-            class="nav-link" 
-            href="patio"
-          >
+          <a class="nav-link" href="brick-patio">
             Welcome Center
           </a>
         </li>
         <li class="nav-item">
-          <a 
-            class="nav-link" 
-            href="ministries">
-              Ministries
-            </a>
+          <a class="nav-link" href="about-hope-point">
+            About
+          </a>
         </li>
         <li class="nav-item">
-          <a 
-            class="nav-link" 
-            href="outreach"
-          >
+          <a class="nav-link" href="hope-point-ministries">
+            Ministries
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="missions/outreach">
             Outreach
           </a>
         </li>
         <li class="nav-item">
-          <a 
-            class="nav-link" 
-            href="events"
-          >
-            Events
+          <a class="nav-link" href="the-table">
+            The Table
           </a>
         </li> 
         <li class="nav-item">
-          <a 
-            class="nav-link" 
-            href="sermons"
-          >
+          <a class="nav-link" href="hope-point-sermons">
             Sermons
           </a>
         </li>
         <li class="nav-item">
-          <a 
-            class="nav-link" 
-            href="https://pushpay.com/pay/hopepointnazarene/N8vOv5UhvTdkugMB4S35UQ"
-          >
+          <a class="nav-link" href="https://pushpay.com/pay/hopepointnazarene/N8vOv5UhvTdkugMB4S35UQ">
             Give
           </a>
         </li> 

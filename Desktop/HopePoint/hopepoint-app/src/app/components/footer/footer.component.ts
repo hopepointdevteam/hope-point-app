@@ -1,16 +1,22 @@
 import { Component, OnInit, HostListener, ViewChild } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl, SafeUrl, Meta, Title } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 import { DeviceDetectorService } from 'ngx-device-detector';
-import { Message } from '../../models/message';
-import { HPConnections } from '../../constants/connection-constants';
-import { AllMinistries } from '../../constants/all-ministries';
+import { Message } from '../../../../build/models/message';
+import { HPConnections } from '../../../../build/constants/connection-constants';
+import { AllMinistries } from '../../../../build/constants/all-ministries';
+import { EventsService } from '../../services/events-service.service';
+import { SendMessageService } from '../../services/send-message.service';
+import { FlashMessagesService } from 'angular2-flash-messages';
 
 @Component({ 
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
+
 export class FooterComponent implements OnInit {
+  events: Event[];
   connections = HPConnections;
   allMinistries = AllMinistries;
   today: number = Date.now();
@@ -20,6 +26,8 @@ export class FooterComponent implements OnInit {
     name: '',
     email: '',
     message: '',
+    phone: '',
+    website: ''
   };
   hidden: boolean = true;
   messageSent = false;
@@ -27,11 +35,45 @@ export class FooterComponent implements OnInit {
 
   @ViewChild('infoMessage') form: any;
 
-  constructor(private deviceService: DeviceDetectorService) { 
+  constructor(
+    private deviceService: DeviceDetectorService, 
+    private _eventService: EventsService, 
+    private sanitizer: DomSanitizer, 
+    private _messageService: SendMessageService,
+    private _flashMessagesService: FlashMessagesService
+  ) { 
     this.getDevice();
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    if(!this.events){
+      this.loadEvents();
+    }
+    
+  }
+
+  loadEvents(){
+    this._eventService.getEvents().subscribe(e => {
+      this.scrubEvents(e);
+    })
+  }
+
+  scrubEvents(events){
+    var mainEvents = []
+    var scrubbedEvents = []
+    events.forEach((e) => {
+      if(e.group_name == "All members of Hope Point Yuba City"){
+        mainEvents.push(e);
+      }   
+    })  
+    this.events = mainEvents;
+  }
+
+  createUrl(text){
+    var slug = text.toLowerCase().replace(/[\'\(\)]+/, '').replace(/[\s]+/, '-')
+
+    return '/' + slug;
+  }
 
   toggleForm(e){
     this.hidden = !this.hidden;
@@ -51,13 +93,26 @@ export class FooterComponent implements OnInit {
 
   sendMessage({value, valid}: {value: Message, valid: boolean}){
     if(!valid){
-        console.log('Form is not valid');
-    } else {
-      this.messageConfirmationHidden = false;
-      this.hidden = true;
-      //TODO: add send logic
-      this.form.reset();
-    }
-    
+      console.log('Form is not valid');
+    } else {    
+      this._messageService.sendMessage(value).subscribe(e => {
+        if(e.message == "Message Delivered"){
+          this._flashMessagesService.show('Your message has been sent', { cssClass: 'alert-info', timeout: 3000 });
+          this.hidden = true;
+          this.form.reset();
+        }        
+      })      
+    }    
   }
+
+  returnLocation(location){
+    if(location.length === undefined){
+      return 'Location: Please visit the <a href="brick-patio">Brick Patio</a> for more information'
+    } else {
+      return 'Location: ' + location
+    }
+  }
+  
+  
+
 }

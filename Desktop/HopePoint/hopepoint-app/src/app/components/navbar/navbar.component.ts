@@ -9,7 +9,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 export class NavbarComponent implements OnInit {
   NavClass= '';
   TogglerClass = ''; 
-
+  base: any;
   constructor(
     
   ) { 
@@ -18,6 +18,13 @@ export class NavbarComponent implements OnInit {
  
 
   ngOnInit() {
+    this.base = window.location.href 
+    this.base = /(http\:\/\/[a-z\.\:0-9]+)\/([a-z]+)*\/*/g.exec(this.base);
+    if(this.base[2] != 'preview' || !this.base[2]){
+      this.base = this.base[1] + '/'
+    } else {
+      this.base = this.base[1] + '/' + this.base[2]
+    }
     this.NavClass = 'navbar navbar-expand-lg navbar-dark fixed-top shadow';
     this.TogglerClass =  'collapse navbar-collapse p-3';
    }
