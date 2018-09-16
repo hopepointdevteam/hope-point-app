@@ -1,17 +1,18 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-
+import { PageLayoutService } from '../../services/page-layout.service';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
   NavClass= '';
   TogglerClass = ''; 
   base: any;
-  constructor(
-    
+  layout: any;
+  constructor( 
+    private _pageService: PageLayoutService
   ) { 
     
   }
@@ -25,8 +26,9 @@ export class NavbarComponent implements OnInit {
     } else {
       this.base = this.base[1] + '/' + this.base[2]
     }
-    this.NavClass = 'navbar navbar-expand-lg navbar-dark fixed-top shadow';
+    this.NavClass = 'navbar navbar-expand-md navbar-dark fixed-top';
     this.TogglerClass =  'collapse navbar-collapse p-3';
+    this.getCurrentBuild()
    }
 
   
@@ -35,11 +37,18 @@ export class NavbarComponent implements OnInit {
  
      const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
      if(number < 10) {
-      this.NavClass = 'navbar navbar-expand-md navbar-dark fixed-top shadow';
+      this.NavClass = 'navbar navbar-expand-md navbar-dark fixed-top';
      } else {
-      this.NavClass = 'navbar navbar-expand-md navbar-dark fixed-top dark shadow';
+      this.NavClass = 'navbar navbar-expand-md navbar-dark fixed-top dark';
      }
- 
+     
    }
+
+   getCurrentBuild(){
+    const page = 'navbar'
+    this._pageService.getPageLayout(page).subscribe(e => {
+      this.layout = e
+    })
+  }
 
 }

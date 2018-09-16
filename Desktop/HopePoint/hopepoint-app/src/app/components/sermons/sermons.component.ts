@@ -5,7 +5,7 @@ import { DomSanitizer, Meta, Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-sermons',
   templateUrl: './sermons.component.html',
-  styleUrls: ['./sermons.component.css']
+  styleUrls: ['./sermons.component.scss']
 })
 
 export class SermonsComponent implements OnInit {

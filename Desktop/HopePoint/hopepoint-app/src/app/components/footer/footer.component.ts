@@ -8,27 +8,24 @@ import { AllMinistries } from '../../../../build/constants/all-ministries';
 import { EventsService } from '../../services/events-service.service';
 import { SendMessageService } from '../../services/send-message.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
+import { PageLayoutService } from '../../services/page-layout.service'; 
+
 
 @Component({ 
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  styleUrls: ['./footer.component.scss']
 })
 
 export class FooterComponent implements OnInit {
   events: Event[];
+  layout: any;
   connections = HPConnections;
   allMinistries = AllMinistries;
   today: number = Date.now();
   deviceInfo = null;
   downloadLink;
-  message: Message = {
-    name: '',
-    email: '',
-    message: '',
-    phone: '',
-    website: ''
-  };
+ 
   hidden: boolean = true;
   messageSent = false;
   messageConfirmationHidden = true;
@@ -40,7 +37,8 @@ export class FooterComponent implements OnInit {
     private _eventService: EventsService, 
     private sanitizer: DomSanitizer, 
     private _messageService: SendMessageService,
-    private _flashMessagesService: FlashMessagesService
+    private _flashMessagesService: FlashMessagesService,
+    private _pageService: PageLayoutService
   ) { 
     this.getDevice();
   }
@@ -49,7 +47,7 @@ export class FooterComponent implements OnInit {
     if(!this.events){
       this.loadEvents();
     }
-    
+    this.getCurrentBuild()
   }
 
   loadEvents(){
@@ -67,13 +65,7 @@ export class FooterComponent implements OnInit {
       }   
     })  
     this.events = mainEvents;
-  }
-
-  createUrl(text){
-    var slug = text.toLowerCase().replace(/[\'\(\)]+/, '').replace(/[\s]+/, '-')
-
-    return '/' + slug;
-  }
+  } 
 
   toggleForm(e){
     this.hidden = !this.hidden;
@@ -90,6 +82,14 @@ export class FooterComponent implements OnInit {
       this.downloadLink = 'desktop'
     }
   } 
+
+  message: Message = {
+    name: '',
+    email: '',
+    message: '',
+    phone: '',
+    website: ''
+  };
 
   sendMessage({value, valid}: {value: Message, valid: boolean}){
     if(!valid){
@@ -113,6 +113,11 @@ export class FooterComponent implements OnInit {
     }
   }
   
-  
+  getCurrentBuild(){
+    const page = 'footer'
+    this._pageService.getPageLayout(page).subscribe(e => {
+      this.layout = e
+    })
+  }
 
 }

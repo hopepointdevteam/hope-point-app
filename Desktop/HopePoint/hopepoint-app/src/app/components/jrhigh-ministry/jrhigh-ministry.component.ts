@@ -7,7 +7,7 @@ import { Event } from '../../../../build/models/event'
 @Component({
   selector: 'app-jrhigh-ministry',
   templateUrl: './jrhigh-ministry.component.html',
-  styleUrls: ['./jrhigh-ministry.component.css']
+  styleUrls: ['./jrhigh-ministry.component.scss']
 })
 export class JrhighMinistryComponent implements OnInit {
   events: Event[];

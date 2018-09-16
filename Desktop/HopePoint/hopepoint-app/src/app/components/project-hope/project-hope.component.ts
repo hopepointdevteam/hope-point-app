@@ -5,7 +5,7 @@ import { DomSanitizer, SafeResourceUrl, SafeUrl, Meta, Title } from '@angular/pl
 @Component({
   selector: 'app-project-hope',
   templateUrl: './project-hope.component.html',
-  styleUrls: ['./project-hope.component.css']
+  styleUrls: ['./project-hope.component.scss']
 })
 export class ProjectHopeComponent implements OnInit {
   events: Event[];

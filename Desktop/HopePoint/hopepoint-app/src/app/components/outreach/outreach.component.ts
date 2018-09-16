@@ -5,7 +5,7 @@ import { OutreachMissions } from '../../../../build/constants/outreach-missions'
 @Component({
   selector: 'app-outreach',
   templateUrl: './outreach.component.html',
-  styleUrls: ['./outreach.component.css']
+  styleUrls: ['./outreach.component.scss']
 })
 export class OutreachComponent implements OnInit {
   missions = OutreachMissions;

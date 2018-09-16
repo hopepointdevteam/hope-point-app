@@ -1,8 +1,8 @@
-<nav [ngClass]="NavClass">
+<nav [ngClass]="NavClass" *ngIf="layout"> 
     <!-- Brand -->
     <a class="navbar-brand" routerLink="/">
       <span>
-        <img [src]="base + '/assets/images/logos/website-logo-wht.png'" class="img-fluid logo" >
+        <img [src]="base + layout.icon" class="img-fluid logo">
       </span>  
     </a>  
     <!-- Toggler/collapsibe Button -->
@@ -25,41 +25,11 @@
         
       <!-- List of Links -->
       <ul class="navbar-nav ml-auto pr-2">
-        <li class="nav-item">
-          <a class="nav-link" href="brick-patio">
-            Welcome Center
+        <li class="nav-item" *ngFor="let item of layout.links">
+          <a class="nav-link" href="{{item.route}}">
+            {{item.title}}
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about-hope-point">
-            About
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="hope-point-ministries">
-            Ministries
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="missions/outreach">
-            Outreach
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="the-table">
-            The Table
-          </a>
-        </li> 
-        <li class="nav-item">
-          <a class="nav-link" href="hope-point-sermons">
-            Sermons
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://pushpay.com/pay/hopepointnazarene/N8vOv5UhvTdkugMB4S35UQ">
-            Give
-          </a>
-        </li> 
       </ul>
       <!--./List of Links-->
     </div>

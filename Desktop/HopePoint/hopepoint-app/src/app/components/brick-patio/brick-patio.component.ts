@@ -6,7 +6,7 @@ import { DomSanitizer, SafeResourceUrl, SafeUrl, Meta, Title } from '@angular/pl
 @Component({
   selector: 'app-brick-patio',
   templateUrl: './brick-patio.component.html',
-  styleUrls: ['./brick-patio.component.css']
+  styleUrls: ['./brick-patio.component.scss']
 })
 export class BrickPatioComponent implements OnInit {
   hidden = [];

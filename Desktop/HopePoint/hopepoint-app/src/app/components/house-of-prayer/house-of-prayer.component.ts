@@ -4,7 +4,7 @@ import { WorshipLeaders } from '../../../../build/constants/worship-leaders';
 @Component({
   selector: 'app-house-of-prayer',
   templateUrl: './house-of-prayer.component.html',
-  styleUrls: ['./house-of-prayer.component.css']
+  styleUrls: ['./house-of-prayer.component.scss']
 })
 export class HouseOfPrayerComponent implements OnInit {
   base: any;

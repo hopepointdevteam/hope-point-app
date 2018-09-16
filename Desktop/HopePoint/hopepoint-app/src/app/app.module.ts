@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -9,6 +9,7 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
 import { SermonsService } from './services/sermons-service.service';
 import { EventsService } from './services/events-service.service';
 import { SendMessageService } from './services/send-message.service';
+import { PageLayoutService } from './services/page-layout.service';
 
 //Components
 import { AppComponent } from './app.component';
@@ -71,7 +72,8 @@ import { JrhighMinistryComponent } from './components/jrhigh-ministry/jrhigh-min
   providers: [
     SermonsService,
     EventsService,
-    SendMessageService
+    SendMessageService,
+    PageLayoutService
   ],
   bootstrap: [
     AppComponent

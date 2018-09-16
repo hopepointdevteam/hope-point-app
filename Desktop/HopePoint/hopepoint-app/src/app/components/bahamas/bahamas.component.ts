@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-bahamas',
   templateUrl: './bahamas.component.html',
-  styleUrls: ['./bahamas.component.css']
+  styleUrls: ['./bahamas.component.scss']
 })
 export class BahamasComponent implements OnInit {
   base: any;
