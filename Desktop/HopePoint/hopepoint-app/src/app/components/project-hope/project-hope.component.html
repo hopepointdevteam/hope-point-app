@@ -1,5 +1,5 @@
-<section class="page-section about-heading">
-    <div class="container">
+<section class="page-section">
+    <div class="container about-heading">
       <img class="img-fluid rounded about-heading-img my-3" [src]="base + '/assets/images/extra_content/project_hope.jpg'" alt="Hope Point Project Hope">
       <div class="about-heading-content mx-auto">
         <div class="row">
@@ -38,7 +38,7 @@
                       </div>
                 </div>
                 <div class="col-xs-7 col-lg-8">
-                  <h6>{{e.event_name}}</h6>
+                  <span class="calendar-event-name">{{e.event_name}}</span>
                 </div>
               </div>
               <div class="col-xs-12" [innerHTML]="sanatizeHtml(e.event_description)" ></div>

@@ -103,7 +103,7 @@ import { PageLayoutService } from '../../services/page-layout.service';
     <div class="container" *ngIf="section.card_column_full_background">
       <div class="card-columns">
         <div class="card" *ngFor="let c of section.card_column_full_background.cards">
-          <a href="{{c.href}}">
+          <a [routerLink]="c.route">
             <div class="card-body p-0">
                 <div [ngStyle]="{ 'background-image': 'url(' + base + c.image + ')',  'background-size': 'cover',
                 'background-repeat': 'no-repeat', 'height': '300px' }">

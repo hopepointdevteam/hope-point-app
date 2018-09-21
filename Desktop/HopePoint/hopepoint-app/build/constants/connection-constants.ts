@@ -23,6 +23,6 @@ export const HPConnections: Connections[] = [
     id: 3,
     name: 'Community', 
     ImgUrl: '/assets/images/backgrounds/Community_BG.jpg', 
-    description: 'At 10am every 3rd Thursday of the month we take coffee and breakfast to our friends at the Riverbottoms. We spend talking about life and the love of Jesus. The bike kitchen was started to help our homeless community. Every 3rd Thursday a group of volunteers takes bike locks, parts and tools to the riverbottoms and set up our own bike repair shop. It’s a way to not only help our homeless community but build relationships with some amazing people. Visit our <a href="missions/project-hope">Project Hope Page</a> for more information.'
+    description: 'At 10am every 3rd Thursday of the month we take coffee and breakfast to our friends at the Riverbottoms. We spend talking about life and the love of Jesus. The bike kitchen was started to help our homeless community. Every 3rd Thursday a group of volunteers takes bike locks, parts and tools to the riverbottoms and set up our own bike repair shop. It’s a way to not only help our homeless community but build relationships with some amazing people. Visit our <a class="link" href="missions/project-hope">Project Hope Page</a> for more information.'
   }
 ]

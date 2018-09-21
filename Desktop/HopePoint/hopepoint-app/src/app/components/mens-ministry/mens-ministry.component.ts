@@ -52,7 +52,7 @@ export class MensMinistryComponent implements OnInit {
     if(contact.length === undefined){
       return ''
     } else {
-      return '<a href="tel:' + contact + '">Call:&nbsp;<i class="fas fa-mobile-alt"></i></a> ' + contact
+      return '<a class="link" href="tel:' + contact + '">Call:&nbsp;<i class="fas fa-mobile-alt"></i></a> ' + contact
     }
   }
 
@@ -60,7 +60,7 @@ export class MensMinistryComponent implements OnInit {
     if(email.length === undefined){
       return ''
     } else {
-      return '<a href="mailto:' + email + '?Subject=Information%20About%20' + event + '" target="_top">Email:&nbsp;<i class="fas fa-envelope"></i></a> ' + email
+      return '<a class="link" href="mailto:' + email + '?Subject=Information%20About%20' + event + '" target="_top">Email:&nbsp;<i class="fas fa-envelope"></i></a> ' + email
     }
   }
 

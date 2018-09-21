@@ -15,32 +15,32 @@
           {
             "name" : "Hope Point Men",
             "image": "/assets/images/backgrounds/Mens_BG.jpg",
-            "route": "ministries/mens"              
+            "route": "/ministries/mens"              
           },
           {
             "name" : "Hope Point Ladies",
             "image" : "/assets/images/backgrounds/Ladies_BG.jpg",
-            "route": "ministries/ladies"
+            "route": "/ministries/ladies"
           },
           {
             "name" : "Life After Fifty Five",
             "image": "/assets/images/backgrounds/Senior_BG.jpg",
-            "route": "ministries/cruisers"
+            "route": "/ministries/cruisers" 
           },
           {
             "name": "Hope Point Kids",
             "image": "/assets/images/backgrounds/HPKids_BG.jpg",
-            "route" : "ministries/kids"
+            "route" : "/ministries/kids"
           },
           {
-            "name" : "Club 45",
+            "name" : "S.W.A.G",
             "image" : "/assets/images/backgrounds/Club45_BG.jpg",
-            "route" : "ministries/club-4-5"
+            "route" : "/ministries/s-w-a-g"
           },
           {
             "name" : "Young & Free Jr. High",
             "image" : "/assets/images/backgrounds/JrHigh_BG.jpg",
-            "route": "ministries/young-and-free-jr-high"
+            "route": "/ministries/young-and-free-jr-high"
           },
           {
             "name" : "Young & Free High School",
@@ -50,7 +50,7 @@
           {
             "name" : "The Table",
             "image" : "/assets/images/backgrounds/TheTable_BG.jpg",
-            "route" : "the-table"
+            "route" : "/the-table"
           }
         ]
       }

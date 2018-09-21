@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SermonsService } from '../../services/sermons-service.service';
-import { DomSanitizer, Meta, Title } from '@angular/platform-browser';
+import { DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-sermons',
@@ -12,9 +12,7 @@ export class SermonsComponent implements OnInit {
   sermons: any;
   clips = [];
   base: any;
-  constructor(private _sermonService: SermonsService, private sanitizer: DomSanitizer, private meta: Meta, private title: Title){
-    // this.meta.addTag({''})
-    this.title.setTitle('Hope Point Sermons')
+  constructor(private _sermonService: SermonsService, private sanitizer: DomSanitizer){
   }
   
   ngOnInit(){

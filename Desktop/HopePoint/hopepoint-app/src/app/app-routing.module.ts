@@ -30,7 +30,7 @@ const routes: Routes = [
   {path: 'ministries/ladies', component: LadiesMinistryComponent},
   {path: 'ministries/cruisers', component: CruisersMinistryComponent},
   {path: 'ministries/kids', component: KidsMinistryComponent},
-  {path: 'ministries/club-4-5', component: Club45MinistryComponent},
+  {path: 'ministries/s-w-a-g', component: Club45MinistryComponent},
   {path: 'ministries/young-and-free-jr-high', component: JrhighMinistryComponent},
   {path: 'brick-patio', component: BrickPatioComponent},
   {path: 'the-table', component: TableComponent},

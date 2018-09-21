@@ -20,7 +20,7 @@ import { DomSanitizer, Meta, Title } from '@angular/platform-browser';
                 {{section.landing.verse}}
             </p>
             <div class="intro-button mx-auto">
-              <a class="btn btn-dark btn-xl" routerLink="section.landing.route">{{section.landing.button_text}}</a>
+              <a class="btn btn-dark btn-xl" href="{{section.landing.route}}">{{section.landing.button_text}}</a>
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@ import { DomSanitizer, Meta, Title } from '@angular/platform-browser';
                 {{paragraph}}
             </p>
             <div class="intro-button mx-auto">
-              <a class="btn btn-dark btn-xl" routerLink="/the-table">{{section.info_section.button_text}}</a>
+              <a class="btn btn-dark btn-xl" routerLink="{{section.info_section.route}}">{{section.info_section.button_text}}</a>
             </div>
           </div>
         </div>
@@ -74,7 +74,7 @@ import { DomSanitizer, Meta, Title } from '@angular/platform-browser';
         </div>
         <div class="row">
           <div class="mx-auto mt-2">
-            <a class="btn btn-dark btn-xl" routerLink="section.call_to_action.route">{{section.call_to_action.button_text}}</a>
+            <a class="btn btn-dark btn-xl" href="{{section.call_to_action.route}} ">{{section.call_to_action.button_text}}</a>
           </div>
         </div>
       </div>

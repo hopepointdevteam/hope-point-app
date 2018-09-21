@@ -26,11 +26,11 @@
                 <h2 class="section-heading mb-4">
                   <span class="section-heading-lower">Let's get you connected</span>
                 </h2>
-                <div class="row">
+                <div class="row connection-container no-gutters">
                     <div class="col-xs-12 col-sm-12 col-md-12 card border-0" *ngFor="let c of connections; let i = index" >
                       <img [src]="base + c.ImgUrl" alt="{{c.name}}" class="card-img-top" (click)="hidden[i] = !hidden[i]"/> 
                       <div class="card-body">
-                        <h6 class="text-center">{{c.name}}</h6>
+                        <h6 class="text-center" (click)="hidden[i] = !hidden[i]">{{c.name}}</h6>
                           <div class="col-xs-12 p-2 shadow-md" [hidden]="!hidden[i]">
                               <div class="col-xs-12 col-sm-12" [innerHTML]="sanatizeHtml(c.description)"></div>
                               <div *ngIf="c.name =='I am Hope Point'">
@@ -41,7 +41,7 @@
                                         <span class="day"> {{Iam.date | date:"dd"}}</span>
                                         <span class="weekday">{{Iam.date | date:"EEEE"}}</span>
                                       </div>
-                                      <p class="calendar-event-name">{{Iam.event_name}}</p>
+                                      <span class="calendar-event-name">&nbsp;&nbsp;{{Iam.event_name}}</span>
                                     </div>
                                     <div class="col-xs-12 col-sm-12 p-0" [innerHTML]="sanatizeHtml(Iam.event_description)"></div>
                                     <div class="col-xs-12 col-sm-12 p-0"><strong>When: </strong>{{ Iam.date + 'T' + Iam.start_time | date:"shortTime" }}</div>
